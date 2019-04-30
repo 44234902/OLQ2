@@ -1,0 +1,30 @@
+#a
+sed 's/Beisel/Weisel/' structure.pdb
+#only print the changed line
+sed -n 's/Beisel/Weisel/' structure.pdb
+
+#b
+sed '1,3d' structure.pdb
+
+#c
+sed -n '5,10p' structure.pdb
+
+#d
+sed '/MET/d' structure.pdb
+
+#e
+sed -ne '/HELIX/{/ILE/p}' structure.pdb
+
+#f
+sed -ne '/^H/{s/$/***/p}' structure.pdb
+
+#g
+sed '/SEQRES/c\SEQ' structure.pdb
+
+#h
+#chech all invisible characters to show the blank lines of the text
+cat -v jabberwocky.txt
+#delete all blank lines
+sed -i '/^[[:space:]]*$/d' jabberwocky.txt
+#check 
+cat -v jabberwocky.txt
