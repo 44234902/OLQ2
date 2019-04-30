@@ -22,7 +22,7 @@ sed -ne '/^H/{s/$/***/p}' structure.pdb
 sed '/SEQRES/c\SEQ' structure.pdb
 
 #h
-#chech all invisible characters to show the blank lines of the text
+#check all invisible characters to show the blank lines of the text
 cat -v jabberwocky.txt
 #delete all blank lines
 sed -i '/^[[:space:]]*$/d' jabberwocky.txt
