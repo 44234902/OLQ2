@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+import calendar
+
+year = int(input("please input year: "))
+check = calendar.isleap(year)
+if check == True:
+ print("leap year")
+else:
+ print("not leap year")
